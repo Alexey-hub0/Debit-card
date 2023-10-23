@@ -26,9 +26,7 @@ public class CardApplicationTest {
     void setUp() {
         driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage" );
-        options.addArguments("--no-sandbox" );
-        options.addArguments("--headless" );
+        options.setHeadless(true);
         driver = new ChromeDriver(options);
     }
 
